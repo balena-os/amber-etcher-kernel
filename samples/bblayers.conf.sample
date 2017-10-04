@@ -1,0 +1,13 @@
+# LAYER_CONF_VERSION is increased each time build/conf/bblayers.conf
+# changes incompatibly
+POKY_BBLAYERS_CONF_VERSION = "2"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+    ${TOPDIR}/../layers/poky/meta \
+    ${TOPDIR}/../layers/poky/meta-poky \
+    ${TOPDIR}/../layers/meta-raspberrypi \
+    ${TOPDIR}/../layers/meta-raspberrypi-misc \
+    "
