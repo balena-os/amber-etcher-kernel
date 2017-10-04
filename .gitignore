@@ -1,0 +1,5 @@
+# Ignore shared build directories
+shared-*/
+
+# Ignore build directories
+build*/
