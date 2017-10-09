@@ -1,0 +1,11 @@
+#!/bin/sh
+
+finish_enabled() {
+	return 1
+}
+
+finish_run() {
+	while true; do
+		sleep 10
+	done
+}
