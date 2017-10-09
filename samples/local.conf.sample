@@ -5,6 +5,22 @@ PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
 DISTRO ?= "poky"
 
+# Initramfs
+INITRAMFS_IMAGE = "etcher-initramfs"
+INITRAMFS_IMAGE_BUNDLE = "1"
+KERNEL_INITRAMFS = "-initramfs"
+INITRAMFS_TASK = ""
+
+# Enable UART
+ENABLE_UART = "1"
+
+# We don't need these packages and they trigger a dependency on meta-oe. We
+# avoid it by masking the recipes
+BBMASK = "rpi-gpio python-sense-hat"
+
+# gstreamer1.0-omx was updated and breaks with poky pyro
+BBMASK += "gstreamer1.0-omx"
+
 #DL_DIR ?= "${TOPDIR}/downloads"
 #SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
 
