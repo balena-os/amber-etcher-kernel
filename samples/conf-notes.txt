@@ -8,4 +8,4 @@
 
  ----------------------------------------
 
-$ bitbake virtual/kernel
+$ MACHINE=XXX bitbake virtual/kernel bcm2835-bootfiles
