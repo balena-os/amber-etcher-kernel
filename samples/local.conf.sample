@@ -1,4 +1,3 @@
-MACHINE ?= "raspberrypi3"
 GPU_MEM = "16"
 BB_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
