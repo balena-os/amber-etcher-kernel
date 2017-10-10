@@ -5,8 +5,7 @@ usb_enabled() {
 }
 
 usb_run() {
-	echo "not implemented"
-	#dd if=/dev/zero of=/usb.vfat bs=512 count=2048
-	#mkfs.vfat -n "USB Storage" /usb.vfat
-	#modprobe g_mass_storage file=/usb.vfat
+	echo "Exposing internal emmc over USB..."
+	modprobe dwc2
+	modprobe g_mass_storage file=/dev/mmcblk0
 }

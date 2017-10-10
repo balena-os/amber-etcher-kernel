@@ -5,6 +5,7 @@ finish_enabled() {
 }
 
 finish_run() {
+	echo "All done. Sleeping..."
 	while true; do
 		sleep 10
 	done
