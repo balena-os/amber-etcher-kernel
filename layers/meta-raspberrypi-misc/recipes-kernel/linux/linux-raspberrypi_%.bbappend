@@ -1,7 +1,7 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 SRC_URI += "file://custom.cfg"
 
-CMDLINE = "console=serial0,115200 shell=after:usb"
+CMDLINE = "console=serial0,115200"
 KERNEL_DEVICETREE = " \
 	bcm2710-rpi-3-b.dtb \
 	bcm2708-rpi-0-w.dtb \
