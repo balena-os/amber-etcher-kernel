@@ -6,7 +6,6 @@ PACKAGE_INSTALL = " \
 	${VIRTUAL-RUNTIME_base-utils} \
 	initramfs-module-usb \
 	initramfs-module-debug \
-	util-linux-agetty \
 	${ROOTFS_BOOTSTRAP_INSTALL}"
 
 # Do not pollute the initrd image with rootfs features
