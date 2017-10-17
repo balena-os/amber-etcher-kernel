@@ -1,4 +1,5 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS_prepend := "${THISDIS}/${PN}/${MACHINE}:${THISDIR}/${PN}:"
+
 SRC_URI += "file://usb"
 
 do_install_append() {

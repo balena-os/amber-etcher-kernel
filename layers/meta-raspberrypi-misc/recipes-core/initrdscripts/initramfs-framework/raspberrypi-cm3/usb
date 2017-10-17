@@ -1,0 +1,20 @@
+#!/bin/sh
+
+usb_enabled() {
+	return 0
+}
+
+usb_run() {
+	echo "Exposing internal emmc over USB... (CM3)"
+	echo 129 > /sys/class/gpio/export
+	echo 0 > /sys/class/gpio/gpio129/value
+
+	echo 3f202000.sdhost > /sys/bus/platform/drivers/sdhost-bcm2835/unbind
+	echo 3f202000.sdhost > /sys/bus/platform/drivers/sdhost-bcm2835/bind
+
+	while ! [ -b /dev/mmcblk0 ]; do
+		sleep 0.1
+	done
+
+	modprobe g_mass_storage file=/dev/mmcblk0
+}
