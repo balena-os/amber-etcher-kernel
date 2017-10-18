@@ -6,5 +6,6 @@ usb_enabled() {
 
 usb_run() {
 	echo "Exposing internal emmc over USB... (CM1)"
+	modprobe dwc2
 	modprobe g_mass_storage file=/dev/mmcblk0
 }

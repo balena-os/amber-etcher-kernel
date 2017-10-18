@@ -16,5 +16,6 @@ usb_run() {
 		sleep 0.1
 	done
 
+	modprobe dwc2
 	modprobe g_mass_storage file=/dev/mmcblk0
 }
