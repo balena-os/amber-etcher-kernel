@@ -9,4 +9,4 @@
  ----------------------------------------
 
 $ MACHINE=raspberrypi-cm bitbake virtual/kernel bcm2835-bootfiles
-$ MACHINE=raspberrypi-cm3 virtual/kernel bcm2835-bootfiles
+$ MACHINE=raspberrypi-cm3 bitbake virtual/kernel bcm2835-bootfiles
