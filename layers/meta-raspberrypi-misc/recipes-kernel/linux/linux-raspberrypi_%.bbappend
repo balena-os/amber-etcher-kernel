@@ -12,3 +12,7 @@ KERNEL_DEVICETREE = " \
 	bcm2708-rpi-cm.dtb \
 	bcm2710-rpi-cm3.dtb \
 	overlays/dwc2.dtbo"
+
+do_install_append () {
+	rmdir ${D}/lib/firmware
+}
