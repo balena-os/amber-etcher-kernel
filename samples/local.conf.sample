@@ -4,6 +4,8 @@ PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 
 DISTRO ?= "poky"
 
+KERNEL_IMAGETYPE = "zImage"
+
 # Initramfs
 INITRAMFS_IMAGE = "etcher-initramfs"
 INITRAMFS_IMAGE_BUNDLE = "1"
